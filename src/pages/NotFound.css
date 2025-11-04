@@ -1,0 +1,9 @@
+.not-found-page{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding-left: 5px;
+    background-color: rgb(225, 225, 225);
+    height: 100vh;
+    color: rgb(79, 79, 79);
+}
