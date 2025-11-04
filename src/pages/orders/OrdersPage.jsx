@@ -5,6 +5,7 @@ import { Header } from '../../components/Header';
 export function OrdersPage() {
     return (
         <div>
+            <link rel="icon" type="image" href="order.png" />
             <title>Orders</title>
 
             <Header />

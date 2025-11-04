@@ -4,6 +4,7 @@ import { Header } from '../../components/Header';
 export function HomePage() {
     return (
         <div>
+            <link rel="icon" type="image" href="house.png" />
             <title>Home Page</title>
 
             <Header />
