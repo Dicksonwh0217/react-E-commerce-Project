@@ -4,7 +4,7 @@ import { HomePage } from './pages/homepage/HomePage'
 import { CheckOutPage } from './pages/checkout/CheckoutPage';
 import { OrdersPage } from './pages/orders/OrdersPage';
 import { TrackingPage } from './pages/tracking/TrackingPage';
-import { NotFound } from './pages/NotFound';
+import { NotFound } from './pages/notfound/NotFound';
 
 function App() {
 
