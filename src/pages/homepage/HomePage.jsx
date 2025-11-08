@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { formatMoney } from '../../utils/money';
 
 export function HomePage({ cart }) {
+  
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
