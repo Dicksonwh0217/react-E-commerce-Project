@@ -12,7 +12,7 @@ export function Product({ product, loadCart }) {
             quantity
         });
         await setAdded(true);
-        setTimeout(() => {setAdded(false)}, 2000);
+        setTimeout(() => { setAdded(false) }, 2000);
         await loadCart();
     }
 
@@ -25,6 +25,7 @@ export function Product({ product, loadCart }) {
         <div className="product-container">
             <div className="product-image-container">
                 <img className="product-image"
+                    data-testid="product-image"
                     src={product.image} />
             </div>
 
@@ -34,7 +35,9 @@ export function Product({ product, loadCart }) {
 
             <div className="product-rating-container">
                 <img className="product-rating-stars"
-                    src={`images/ratings/rating-${product.rating.stars * 10}.png`} />
+                    data-testid="rating-image"
+                    src={`images/ratings/rating-${product.rating.stars * 10}.png`}
+                />
                 <div className="product-rating-count link-primary">
                     {product.rating.count}
                 </div>
@@ -61,7 +64,7 @@ export function Product({ product, loadCart }) {
 
             <div className="product-spacer"></div>
 
-            <div className="added-to-cart" style={{opacity: added ? 1 : 0}}>
+            <div className="added-to-cart" style={{ opacity: added ? 1 : 0 }}>
                 <img src="images/icons/checkmark.png" />
                 Added
             </div>
