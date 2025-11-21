@@ -3,13 +3,16 @@ import { HomePage } from "./HomePage";
 import { render, screen, within } from "@testing-library/react";
 import axios from "axios";
 import { MemoryRouter } from "react-router";
+import userEvent from "@testing-library/user-event";
 
 vi.mock('axios');
 
 describe('HomePage component', () => {
     let loadCart;
+    let user;
     beforeEach(() => {
         loadCart = vi.fn();
+        user = userEvent.setup();
 
         axios.get.mockImplementation(async (urlPath) => {
             if (urlPath === '/api/products') {
@@ -58,4 +61,40 @@ describe('HomePage component', () => {
             within(productContainer[1]).getByText('Intermediate Size Basketball')
         ).toBeInTheDocument();
     });
+
+    it('add products to the cart', async () => {
+        render(
+            <MemoryRouter>
+                <HomePage cart={[]} loadCart={loadCart} />
+            </MemoryRouter>
+        );
+
+        const productContainer = await screen.findAllByTestId('product-container');
+        let quantityselector = within(productContainer[0]).getByTestId('quantity-container');
+        let addToCartButton = within(productContainer[0]).getByTestId('add-to-cart-button');
+
+        await user.selectOptions(quantityselector, '2');
+        await user.click(addToCartButton);
+
+        await expect(axios.post).toHaveBeenNthCalledWith(1,
+            '/api/cart-items',
+            {
+                productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+                quantity: 2
+            });
+
+        quantityselector = within(productContainer[1]).getByTestId('quantity-container');
+        addToCartButton = within(productContainer[1]).getByTestId('add-to-cart-button');
+        await user.selectOptions(quantityselector, '3');
+        await user.click(addToCartButton);
+
+        expect(axios.post).toHaveBeenNthCalledWith(2,
+            '/api/cart-items',
+            {
+                productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+                quantity: 3
+            });
+        expect(loadCart).toHaveBeenCalled(2);
+
+    })
 });
