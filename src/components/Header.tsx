@@ -3,7 +3,15 @@ import './Header.css';
 import { useState } from 'react';
 import { useSearchParams } from 'react-router';
 
-export function Header({ cart }) {
+type HeaderProps = {
+    cart: {
+        productId: string,
+        quantity: number,
+        deliveryoptionId: string
+    }[];
+};
+
+export function Header({ cart }: HeaderProps) {
     const navigate = useNavigate();
     let totalQuantity = 0;
 
@@ -15,11 +23,11 @@ export function Header({ cart }) {
     const search = searchParams.get('search');
     const [searchText, setSearchText] = useState(search || '');
 
-    const changeSearchText = (event) => {
+    const changeSearchText = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchText(event.target.value);
     }
-    
-    function searchProduct(){
+
+    function searchProduct() {
         navigate(`/?search=${searchText}`);
     }
 
@@ -36,7 +44,7 @@ export function Header({ cart }) {
                 </div>
 
                 <div className="middle-section">
-                    <input className="search-bar" type="text" placeholder="Search" onChange={changeSearchText}/>
+                    <input className="search-bar" type="text" placeholder="Search" onChange={changeSearchText} />
 
                     <button className="search-button" onClick={searchProduct}>
                         <img className="search-icon" src="images/icons/search-icon.png" />
