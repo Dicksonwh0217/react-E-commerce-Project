@@ -1,20 +1,61 @@
-#🛒 E-commerce Project
+🛒 E-commerce Project
 
-A full-featured React-based E-commerce web application built to demonstrate modern front-end development, backend integration, and AWS deployment. The project includes product browsing, cart management, order tracking, and secure deployment using AWS services.
+A full-featured React-based E-commerce web application demonstrating modern frontend development, API integration, and cloud deployment using AWS.
+This project showcases a complete shopping workflow — from browsing products to checkout and order tracking.
 
-#🚀 Features
+🌐 Live Demo
+
+🔗 Website: https://dswhproject.com
+
+💻 GitHub Repository: github.com/Dicksonwh0217/ecommerce-project
+
+🚀 Features
+
 🏠 Home Page – Displays product listings with search and filter options.
+
 🛍️ Cart System – Add, remove, and modify items with dynamic total calculation.
+
 📦 Order Management – Users can place and track their orders in real-time.
+
 🔍 Search & Filter – Quickly locate products using keyword search.
-☁️ Cloud Deployment – Hosted on AWS Elastic Beanstalk with domain management via Route 53 and SSL using AWS Certificate Manager.
-🔗 API Integration – Communicates with backend services using Axios for RESTful requests.
 
-#🧱 Tech Stack
-Frontend: React, JavaScript, CSS
-Backend: Node.js (third-party API integration)
-Hosting & Deployment: AWS Elastic Beanstalk, Route 53, AWS Certificate Manager
-Tools: Git, GitHub, NPM, Axios
+☁️ Cloud Deployment – Hosted on AWS Elastic Beanstalk with Route 53 and SSL via AWS Certificate Manager.
 
-#🌐 Live Demo
-Website: dswhproject.com
+🔗 API Integration – Communicates with backend services through Axios and RESTful APIs.
+
+🧱 Tech Stack
+Category	Technologies
+Frontend	React, JavaScript, CSS
+Backend	Node.js (third-party API integration)
+Cloud & Hosting	AWS Elastic Beanstalk, Route 53, AWS Certificate Manager
+Tools	Git, GitHub, NPM, Axios
+⚙️ Installation & Setup
+# 1️⃣ Clone the repository
+git clone https://github.com/Dicksonwh0217/ecommerce-project.git
+cd ecommerce-project
+
+# 2️⃣ Install dependencies
+npm install
+
+# 3️⃣ Run locally
+npm run dev
+
+# 4️⃣ Build for production
+npm run build
+
+🖼️ Screenshots
+
+Add images or GIF demos for a visual showcase (recommended):
+
+![Homepage Screenshot](./screenshots/homepage.png)
+![Cart Screenshot](./screenshots/cart.png)
+
+💡 Key Learnings
+
+Designed reusable React components for scalable UI.
+
+Deployed using AWS Elastic Beanstalk and managed domains with Route 53.
+
+Practiced RESTful API communication and frontend state management.
+
+Strengthened knowledge of cloud deployment workflows and version control with GitHub.
