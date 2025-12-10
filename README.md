@@ -7,7 +7,7 @@ This project showcases a complete shopping workflow — from browsing products t
 
 🔗 Website: https://dswhproject.com
 
-💻 GitHub Repository: github.com/Dicksonwh0217/ecommerce-project
+💻 GitHub Repository: https://github.com/Dicksonwh0217/react-E-commerce-Project
 
 🚀 Features
 
@@ -24,14 +24,16 @@ This project showcases a complete shopping workflow — from browsing products t
 🔗 API Integration – Communicates with backend services through Axios and RESTful APIs.
 
 🧱 Tech Stack
-Category	Technologies
+Category	Technologies:
+
 Frontend	React, JavaScript, CSS
 Backend	Node.js (third-party API integration)
 Cloud & Hosting	AWS Elastic Beanstalk, Route 53, AWS Certificate Manager
 Tools	Git, GitHub, NPM, Axios
 ⚙️ Installation & Setup
 # 1️⃣ Clone the repository
-git clone https://github.com/Dicksonwh0217/ecommerce-project.git
+git clone https://github.com/Dicksonwh0217/react-E-commerce-Project
+
 cd ecommerce-project
 
 # 2️⃣ Install dependencies
@@ -42,13 +44,6 @@ npm run dev
 
 # 4️⃣ Build for production
 npm run build
-
-🖼️ Screenshots
-
-Add images or GIF demos for a visual showcase (recommended):
-
-![Homepage Screenshot](./screenshots/homepage.png)
-![Cart Screenshot](./screenshots/cart.png)
 
 💡 Key Learnings
 
